@@ -1,0 +1,25 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: windows-latest
+
+steps:
+- task: UiPathPack@2
+  inputs:
+    versionType: 'AutoVersion'
+    projectJsonPath: '$(Build.SourcesDirectory)'
+    orchestratorConnection: 'Uipath-vb'
+    outputPath: '$(Build.ArtifactStagingDirectory)\Output'
+    runWorkflowAnalysis: true 
+- task: UiPathDeploy@2
+  inputs:
+    orchestratorConnection: 'Uipath-vb'
+    packagesPath: '$(Build.ArtifactStagingDirectory)\Output'
+    folderName: 'CICD'
+    entryPoints: 'Main.xaml'
