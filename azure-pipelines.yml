@@ -14,12 +14,14 @@ steps:
   inputs:
     versionType: 'AutoVersion'
     projectJsonPath: '$(Build.SourcesDirectory)'
-    orchestratorConnection: 'Uipath-vb'
+    orchestratorConnection: 'uipathcloud'
     outputPath: '$(Build.ArtifactStagingDirectory)\Output'
-    runWorkflowAnalysis: true 
+    runWorkflowAnalysis: true
+    traceLevel: 'Verbose'
 - task: UiPathDeploy@2
   inputs:
-    orchestratorConnection: 'Uipath-vb'
+    orchestratorConnection: 'uipathcloud'
     packagesPath: '$(Build.ArtifactStagingDirectory)\Output'
     folderName: 'CICD'
     entryPoints: 'Main.xaml'
+    traceLevel: 'Verbose'
