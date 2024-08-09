@@ -81,6 +81,6 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="353.6,125.6" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Hello GitHub @147pmEST&quot;]" />
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="353.6,108.8" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Push Change to Branch AM &quot;]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="353.6,108.8" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Push Change to Branch AM 001 &quot;]" />
   </Sequence>
 </Activity>
